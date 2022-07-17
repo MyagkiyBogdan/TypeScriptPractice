@@ -1,17 +1,17 @@
 // Задайте правильные ts типы, для классических js;
 
-let age = 50;
-let name = 'Max';
-let toggle = true;
-let empty = null;
-let notInitialize = undefined;
-let callback = a => {
+let age: number = 50;
+let newName: string = 'Max';
+let toggle: boolean = true;
+let empty: null = null;
+let notInitialize: undefined = undefined;
+let callback = (a: number) => {
   return 100 + a;
 };
 
 // Задавайте тип для переменной в которую можно сохранить любое значение.
 
-let anything = -20;
+let anything: any = -20;
 anything = 'Text';
 anything = {};
 
@@ -22,11 +22,13 @@ some = 'Text';
 
 let str: string;
 
-str = some;
+if (typeof some === 'string') {
+  str = some;
+}
 
 // Сделайте неизменяемый массив со строго описанными типами. Массив для примера.
 
-let person = ['Max', 21];
+let person: [string, number] = ['Max', 21];
 
 // Опишите enum условие следующее, он должен отображать статус загрузки. Загружается (LOADING) и загружена (READY).
 
